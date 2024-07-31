@@ -1,6 +1,8 @@
 from angle_coords import angle_between_coords, deg_to_rad
-from coordinates import get_iss_position
+from get_ISS_coordinates import get_iss_position
 import math
+
+
 
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -23,6 +25,7 @@ def haversine(lat1, lon1, lat2, lon2):
 
     return distancia
 
+
 # Ejemplo de uso
 lat1, lon1 = 41.3109, -4.9139  # Tu posición
 
@@ -34,4 +37,5 @@ if coords:
     # Altitud de la ISS en km
 
     print(haversine(lat1,lon1,lat2,lon2))
+
 
