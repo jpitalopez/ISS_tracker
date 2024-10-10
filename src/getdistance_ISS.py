@@ -26,16 +26,32 @@ def haversine(lat1, lon1, lat2, lon2):
     return distancia
 
 
-# Ejemplo de uso
-lat1, lon1 = 41.3109, -4.9139  # Tu posición
 
-coords = get_iss_position()
+def getIssdistance(lat1,lon1):
 
-if coords:
-    lat2, lon2 = coords
+
+
+
+    coords = get_iss_position()
+
+
+
+    if coords:
+        lat2, lon2 = coords
     
-    # Altitud de la ISS en km
+        # ISS distance in m
+        
+        iss_distance = haversine(lat1,lon1,lat2,lon2)
 
-    print(haversine(lat1,lon1,lat2,lon2))
+        print(iss_distance)
+        
+        return iss_distance
 
 
+        
+
+
+# Ejemplo de uso
+#lat1, lon1 = 41.3109, -4.9139  # Tu posición
+
+#getIssdistance(lat1,lon1)
